@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './login.css'
+import '../../config/firebase'
 
-import firebase from '../../config/firebase'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
 function Login() {
@@ -16,7 +16,7 @@ function Login() {
             }
             ).catch((error) => {
                 setMsgTipo('erro')
-
+                console.log(error)
             })
     }
 
